@@ -1,11 +1,17 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const activeStyle = {
+    backgroundColor: "pink",
+}
 
 const Navigation = () => {
     return <ul>
-            <li key="main"><Link to="/">Strona główna</Link></li>
-            <li key="about-us"><Link to="/about/us">O nas</Link></li>
-            <li key="about-company"><Link to="/about/company">O firmie</Link></li>
+            <li key="main"><NavLink exact to="/" activeStyle={activeStyle}>Strona główna</NavLink></li>
+            <li key="hello-jan"><NavLink to="/hello/Jan" activeStyle={activeStyle}>Hello Jan</NavLink></li>
+            <li key="hello-iga"><NavLink to="/hello/Iga" activeStyle={activeStyle}>Hello Iga</NavLink></li>
+            <li key="checkage-11"><NavLink to="/checkage/11" activeStyle={activeStyle}>Sprawdź wiek: 11</NavLink></li>
+            <li key="checkage-20"><NavLink to="/checkage/20" activeStyle={activeStyle}>Sprawdź wiek: 20</NavLink></li>
         </ul>
 
 };
