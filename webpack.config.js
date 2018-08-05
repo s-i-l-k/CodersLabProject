@@ -11,9 +11,10 @@ module.exports = {
             }
         ]
     },
-        resolve: {
-            extensions: ['*', '.js', '.jsx']
-        },
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    },
+    watch:	true,
     output: {
         path: __dirname + "/dist",
         filename: "bundle.js"
